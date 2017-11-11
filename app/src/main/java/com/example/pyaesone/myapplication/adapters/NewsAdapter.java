@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.pyaesone.myapplication.R;
+import com.example.pyaesone.myapplication.delegates.NewsItemDelegate;
 import com.example.pyaesone.myapplication.viewholders.NewsViewHolder;
 
 /**
@@ -16,16 +17,19 @@ import com.example.pyaesone.myapplication.viewholders.NewsViewHolder;
 public class NewsAdapter extends RecyclerView.Adapter<NewsViewHolder> {
     private Context mContext;
     private LayoutInflater mLayoutInflator;
+    private NewsItemDelegate mNewsItemDelegate;
 
-    public NewsAdapter(Context context) {
+    public NewsAdapter(Context context, NewsItemDelegate newsItemDelegate) {
         mLayoutInflator = LayoutInflater.from(context);
-        mContext =context;
+        mContext = context;
+        mNewsItemDelegate = newsItemDelegate;
     }
+
     @Override
     public NewsViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View newsItemView =mLayoutInflator.inflate(R.layout.view_item_news, parent, false);
+        View newsItemView = mLayoutInflator.inflate(R.layout.view_item_news, parent, false);
 
-        return new NewsViewHolder(newsItemView);
+        return new NewsViewHolder(newsItemView,mNewsItemDelegate);
     }
 
     @Override

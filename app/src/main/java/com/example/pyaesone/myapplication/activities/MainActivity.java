@@ -1,5 +1,6 @@
 package com.example.pyaesone.myapplication.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -11,8 +12,9 @@ import android.view.View;
 
 import com.example.pyaesone.myapplication.R;
 import com.example.pyaesone.myapplication.adapters.NewsAdapter;
+import com.example.pyaesone.myapplication.delegates.NewsItemDelegate;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements NewsItemDelegate {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,8 +34,33 @@ public class MainActivity extends AppCompatActivity {
 
         RecyclerView rvNews = findViewById(R.id.rv_news);
         rvNews.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false));
-        NewsAdapter newsAdapter = new NewsAdapter(getApplicationContext());
+        NewsAdapter newsAdapter = new NewsAdapter(getApplicationContext(), this);
         rvNews.setAdapter(newsAdapter);
     }
 
+    @Override
+    public void onTapComment() {
+
+    }
+
+    @Override
+    public void onTapSendTo() {
+
+    }
+
+    @Override
+    public void onTapFavourite() {
+
+    }
+
+    @Override
+    public void onTapStatistics() {
+
+    }
+
+    @Override
+    public void onTapNews() {
+        Intent intent = new NewsDetailsActivity().newIntent(getApplicationContext());
+        startActivity(intent);
+    }
 }
