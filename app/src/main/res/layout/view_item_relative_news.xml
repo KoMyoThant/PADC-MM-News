@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="270dp"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin_medium_2"
+    android:layout_marginLeft="@dimen/margin_medium_2"
+    android:layout_marginTop="@dimen/margin_medium_2"
+    card_view:elevation="@dimen/margin_small">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_relative_news_hero_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_relative_news_placeholder" />
+
+        <TextView
+            android:id="@+id/tv_relative_news_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_relative_news_hero_image"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:ellipsize="end"
+            android:lineSpacingMultiplier="1.3"
+            android:maxLines="3"
+            android:text="ရန်ကုန်တိုင်းဒေသကြီးအတွင်းရှိ အငှားယာဉ်များ City Taxi မှတ်ပုံတင်ခြင်း၊ သက်တမ်းတိုးခြင်း စတင်ဆောင်ရွက်လျက်ရှိပြီး မှတ်ပုံတင်ဆောင်ရွက်ခြင်း မရှိပါက နောင်တွင် ပြေးဆွဲခွင့်ကန့်သတ်မည်ဟုဆို"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/text_regular_2x" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
