@@ -14,6 +14,8 @@ import android.view.View;
 
 import com.example.pyaesone.myapplication.R;
 import com.example.pyaesone.myapplication.adapters.NewsAdapter;
+import com.example.pyaesone.myapplication.components.EmptyViewPod;
+import com.example.pyaesone.myapplication.components.SmartRecyclerView;
 import com.example.pyaesone.myapplication.delegates.NewsItemDelegate;
 
 import butterknife.BindView;
@@ -22,6 +24,12 @@ import butterknife.ButterKnife;
 public class MainActivity extends AppCompatActivity implements NewsItemDelegate {
     @BindView(R.id.drawer_layout)
     DrawerLayout drawerLayout;
+
+    @BindView(R.id.rv_news)
+    SmartRecyclerView rvNews;
+
+    @BindView(R.id.vp_empty_news)
+    EmptyViewPod vpEmptyNews;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +51,8 @@ public class MainActivity extends AppCompatActivity implements NewsItemDelegate 
             }
         });
 
-        RecyclerView rvNews = findViewById(R.id.rv_news);
+        vpEmptyNews.setEmptyData("Ha Ha No data");
+        rvNews.setEmptyView(vpEmptyNews);
         rvNews.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false));
         NewsAdapter newsAdapter = new NewsAdapter(getApplicationContext(), this);
         rvNews.setAdapter(newsAdapter);
