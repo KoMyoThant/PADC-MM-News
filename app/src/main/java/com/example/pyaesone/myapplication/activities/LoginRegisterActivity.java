@@ -7,7 +7,6 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 
 import com.example.pyaesone.myapplication.R;
 import com.example.pyaesone.myapplication.delegates.LoginRegisterDelegate;
@@ -16,7 +15,6 @@ import com.example.pyaesone.myapplication.fragments.RegisterFragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 /**
  * Created by pyaesone on 11/26/17.
