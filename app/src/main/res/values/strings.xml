@@ -20,6 +20,13 @@
 
 အာဆီယံ ခေါင်းဆောင်များ၏ ဆွေးနွေးပွဲများကို ဖိလစ်ပိုင်နိုင်ငံမြို့တော် မနီလာတွင် နိုဝင်ဘာ ၁၂ ရက်မှ ၁၄ ရက်နေ့အထိ ကျင်းပပြုလုပ်သွားမည်ဖြစ်ပြီး ကမ္ဘာ့ခေါင်းဆောင်များလည်း တက်ရောက်မည်ဖြစ်ရာ လုံခြုံရေး အထူး တင်းကြပ်ထားကြောင်းလည်း သိရသည်။</string>
 
-<string name="msg_generic_no_data">No Data to Display</string>
+    <string name="msg_generic_no_data">No Data to Display</string>
     <string name="lbl_refresh">Refresh</string>
+    <string name="btn_forgot_password"><u><i>Forget Password</i></u></string>
+    <string name="btn_to_register"><u><i>New User ? Register</i></u></string>
+    <string name="hint_enter_email">Your Email</string>
+    <string name="hint_enter_phone">Your Phone</string>
+    <string name="hint_enter_password">Enter Password</string>
+    <string name="lbl_mark_my_home_on_google_map"><u>Mark my home on Google Map</u></string>
+    <string name="lbl_navigate_to_login"><u><i>Already have account?</i></u></string>
 </resources>

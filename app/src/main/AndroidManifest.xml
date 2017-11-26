@@ -27,6 +27,10 @@
             android:name=".activities.NewsDetailsActivity"
             android:theme="@style/AppTheme.NoActionBar" />
 
+        <activity
+            android:name=".activities.LoginRegisterActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
         <receiver android:name=".receivers.InternetStateReceiver">
             <intent-filter>
                 <action android:name="android.intent.conn.CONNECTIVITY_CHANGE" />

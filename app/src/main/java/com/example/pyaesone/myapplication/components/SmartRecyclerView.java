@@ -46,7 +46,7 @@ public class SmartRecyclerView extends RecyclerView {
     @Override
     public void setAdapter(Adapter adapter) {
         Adapter oldAdapter = getAdapter();
-        if (oldAdapter != null) {
+        if (oldAdapter != null) {       // Cleaning previous adapter if exist ( for Performance - GIGO)
             oldAdapter.unregisterAdapterDataObserver(dataObserver);
         }
         super.setAdapter(adapter);
@@ -55,7 +55,7 @@ public class SmartRecyclerView extends RecyclerView {
         checkIfEmpty();
     }
 
-    // Modified feature methods
+    // Modified custom feature methods ( 2 )
     public void setEmptyView(View emptyView) {
         mEmptyView = emptyView;
     }

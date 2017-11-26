@@ -44,7 +44,7 @@ public class EmptyViewPod extends RelativeLayout {
         ButterKnife.bind(this, this);
     }
 
-    // Modified feature methods
+    // Modified custom feature methods
     public void setEmptyData(int emptyImageId, String emptyMsg) {
         ivEmpty.setImageResource(emptyImageId);
         tvEmpty.setText(emptyMsg);
